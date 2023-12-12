@@ -195,7 +195,7 @@ func NewClientByType(username, password, token, url string, clientType clientTyp
 			newConfig.WaitTime = helpers.MaxWaitTime
 			newConfig.HTTPClient = &http.Client{Transport: CreateTransport()}
 			newConfig.UserAgent = fmt.Sprintf(
-				"terraformer_ionos-cloud-sdk-go/%s_os/%s_arch/%s", ionoscloud.Version, runtime.GOOS, runtime.GOARCH)
+				"terraformer_ionos-cloud-sdk-go-dns/%s_os/%s_arch/%s", dns.Version, runtime.GOOS, runtime.GOARCH)
 			return dns.NewAPIClient(newConfig)
 		}
 	default:
